@@ -1,7 +1,7 @@
 # css-simple - Simple eDSL for CSS
 ## Installation
 
-Add the `css-simple` to dependencies at `package.yaml` or `*.cabal`.
+[DOES NOT WORK YET] Add the `css-simple` to dependencies at `package.yaml` or `*.cabal`.
 
 ## Usage
 
