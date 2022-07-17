@@ -6,7 +6,7 @@ cabal-version: 1.12
 
 name:           css-simple
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/githubuser/css-simple#readme>
+description:    See the "Css" module description
 homepage:       https://github.com/githubuser/css-simple#readme
 bug-reports:    https://github.com/githubuser/css-simple/issues
 author:         Author name here
