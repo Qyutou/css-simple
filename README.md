@@ -51,7 +51,7 @@ sampleStyle = do
         background "#000000"
 
     ".wrapper" do
-        width "90vw"
-        maxWidth "72rem"
+        width      "90vw"
+        maxWidth   "72rem"
 
 ```
