@@ -1,0 +1,88 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           css-simple
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/css-simple#readme>
+homepage:       https://github.com/githubuser/css-simple#readme
+bug-reports:    https://github.com/githubuser/css-simple/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2022 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/css-simple
+
+library
+  exposed-modules:
+      Css
+      Css.Internal
+      Css.Properties
+  other-modules:
+      Paths_css_simple
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , mtl
+    , text
+    , text-builder
+  default-language: Haskell2010
+
+executable css-simple-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_css_simple
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , css-simple
+    , mtl
+    , text
+    , text-builder
+  default-language: Haskell2010
+
+test-suite css-simple-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_css_simple
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , css-simple
+    , mtl
+    , text
+    , text-builder
+  default-language: Haskell2010
+
+benchmark css-simple-bench
+  type: exitcode-stdio-1.0
+  main-is: Bench.hs
+  other-modules:
+      Paths_css_simple
+  hs-source-dirs:
+      bench
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , criterion
+    , css-simple
+    , mtl
+    , text
+    , text-builder
+  default-language: Haskell2010
