@@ -1,17 +1,18 @@
 name:                css-simple
 version:             0.1.0.0
-github:              "githubuser/css-simple"
+github:              "Qyutou/css-simple"
 license:             BSD3
-author:              "Author name here"
-maintainer:          "example@example.com"
-copyright:           "2022 Author name here"
+author:              "Alexey Seledkov"
+maintainer:          "qyutou@gmail.com"
+copyright:           "2022 Alexey Seledkov"
+category:            "Web"
+synopsis:            eDSL for CSS
 
 extra-source-files:
 - README.md
 - ChangeLog.md
 
 # Metadata used when publishing your package
-# synopsis:            Short description of your package
 # category:            Web
 
 # To avoid duplicated efforts in documentation and dealing with the
