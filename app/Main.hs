@@ -8,12 +8,12 @@ Stability   : experimental
 Portability : POSIX
 -}
 
-{-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE BlockArguments    #-}
+{-# LANGUAGE OverloadedStrings #-}
 
 module Main where
 
-import Css
+import           Css
 
 sampleStyle :: Css ()
 sampleStyle = do

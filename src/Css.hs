@@ -68,7 +68,7 @@ Same example using do-notation:
 > sampleStyles = do
 >     "body" do
 >         background "#000000"
-> 
+>
 >     ".wrapper" do
 >         width "90vw"
 >         maxWidth "72rem"
@@ -118,5 +118,5 @@ module Css
     , module Css.Properties
     ) where
 
-import Css.Internal
-import Css.Properties
+import           Css.Internal
+import           Css.Properties

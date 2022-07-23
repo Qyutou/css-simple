@@ -12,8 +12,8 @@ Portability : POSIX
 
 module Css.Properties where
 
-import Css.Internal (Css, declaration)
-import Data.Text (Text)
+import           Css.Internal (Css, declaration)
+import           Data.Text    (Text)
 
 -- | CSS Property "accent-color"
 accentColor

@@ -8,15 +8,14 @@ Stability   : experimental
 Portability : portable
 -}
 
-{-# LANGUAGE GeneralizedNewtypeDeriving #-}
-{-# LANGUAGE MultiParamTypeClasses      #-}
-{-# LANGUAGE FlexibleInstances          #-}
-{-# LANGUAGE OverloadedStrings          #-}
 {-# LANGUAGE BlockArguments             #-}
-{-# LANGUAGE TypeFamilies               #-}
-{-# LANGUAGE InstanceSigs               #-}
-{-# LANGUAGE LambdaCase                 #-}
+{-# LANGUAGE FlexibleInstances          #-}
 {-# LANGUAGE GADTs                      #-}
+{-# LANGUAGE GeneralizedNewtypeDeriving #-}
+{-# LANGUAGE InstanceSigs               #-}
+{-# LANGUAGE MultiParamTypeClasses      #-}
+{-# LANGUAGE OverloadedStrings          #-}
+{-# LANGUAGE TypeFamilies               #-}
 
 module Css.Internal
     ( -- * Types
@@ -44,21 +43,13 @@ module Css.Internal
     , getRules
     ) where
 
-import Data.Text (Text)
-import qualified Data.Text as T
-import qualified Data.Text.IO as TIO
-import Text.Builder ( Builder
-                    , run
-                    , text
-                    )
-import Control.Monad.Writer ( Writer
-                            , MonadWriter
-                            , runWriter
-                            , tell
-                            , listen
-                            , pass
-                            )
-import Data.String (IsString(fromString))
+import           Control.Monad.Writer (MonadWriter, Writer, listen, pass,
+                                       runWriter, tell)
+import           Data.String          (IsString (fromString))
+import           Data.Text            (Text)
+import qualified Data.Text            as T
+import qualified Data.Text.IO         as TIO
+import           Text.Builder         (Builder, run, text)
 
 -- * Types
 
@@ -123,7 +114,7 @@ instance (a ~ Css (), b ~ Css ()) => IsString (a -> b) where
     fromString :: String -> Css () -> Css ()
     fromString strSelector css = case getRules css of
         Leaf txt -> declaration (T.pack strSelector) txt
-        inner -> rule (T.pack strSelector) (tell inner)
+        inner    -> rule (T.pack strSelector) (tell inner)
     {-# INLINE fromString #-}
 
 -- | Show instance for the Css monad
@@ -148,7 +139,7 @@ rule
     :: Text   -- ^ Selector
     -> Css () -- ^ Inner Css
     -> Css () -- ^ Return in Css Monad
-rule selector inner = 
+rule selector inner =
     tell $ Rule selector (getRules inner) mempty
 {-# INLINE rule #-}
 
