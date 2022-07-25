@@ -225,7 +225,6 @@ renderRuleWith' (Rule selector inner next) config prefix =
     <> renderRuleWith' next config prefix
 renderRuleWith' (Declaration property value Empty) config prefix =
     prefix <> text property <> ":" <> (text . _spacing) config <> text value
-    <> ";"
 renderRuleWith' (Declaration property value next) config prefix =
     prefix <> text property <> ":" <> (text . _spacing) config <> text value
     <> ";" <> (text . _newline) config
