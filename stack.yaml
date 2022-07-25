@@ -68,3 +68,5 @@ packages:
 
 # Used to fix the issue with hls
 system-ghc: true
+
+pvp-bounds: both
