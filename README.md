@@ -81,10 +81,12 @@ sampleStyle = do
 
 ```
 
+## Rendering
+
 Rendering configuration define how the CSS Document shall be rendered. It must
 be the Config data type. Currently there are two configurations:
 - `pretty` - Pretty, human-readable configuration, used everywhere by default,
-  yet works slightly slower than the `compact`
+  but works slightly slower than the `compact`
 - `compact` - As compact rendering as possible, render as a one-line with the
   least possible amount of the spacing
 
@@ -101,3 +103,32 @@ The rendering of the CSS documents can be done with the functions:
   FilePath with default rendering configuration
 - `renderCssToFileWith` - Used to render the Css as a Data.Text and save it to
   FilePath with certain rendering configuration
+
+Here are example of different rendering of the example in the previous
+section.
+
+Pretty (default) configuration:
+
+```haskell
+>>> putCss sampleStyle
+```
+
+```css
+body {
+    background: #000000
+}
+.wrapper {
+    width: 90vw;
+    max-width: 72rem
+}
+```
+
+Compact configuration:
+
+```haskell
+>>> putCssWith sampleStyle compact
+```
+
+```css
+body{background:#000000}.wrapper{width:90vw;max-width:72rem}
+```
