@@ -68,6 +68,8 @@ An example of the CSS in the function:
 {-# LANGUAGE BlockArguments    #-}
 {-# LANGUAGE OverloadedStrings #-}
 
+import Css
+
 sampleStyle :: Css ()
 sampleStyle = do
     "body" do
