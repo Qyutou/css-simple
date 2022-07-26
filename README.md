@@ -31,6 +31,7 @@ body {
   background: #000000
 }
 .wrapper {
+  width: 90vw;
   max-width: 72rem
 }
 ```
