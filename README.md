@@ -5,7 +5,7 @@ Simple eDSL for writing CSS
 
 For normal work the library requires the OverloadedStrings language extension.
 
-There are three main ways to create the CSS Rules: "rule", infix "?" or
+There are three main ways to create the CSS Rules: `rule`, infix `?` or
 without any function using the OverloadedStrings if the type is specified.
 ```haskell
 >>> :set -XOverloadedStrings
