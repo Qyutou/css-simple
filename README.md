@@ -3,19 +3,27 @@ Simple eDSL for writing CSS
 
 ## Usage
 
+For normal work the library requires the OverloadedStrings language extension.
+
+There are three main ways to create the CSS Rules: "rule", infix "?" or
+without any function using the OverloadedStrings if the type is specified.
+```haskell
+>>> :set -XOverloadedStrings
+>>> rule ".wrapper" (maxWidth "72rem")
+>>> ".wrapper" ? (maxWidth "72rem")
+>>> ".wrapper" (maxWidth "72rem") :: Css ()
+```
+
+```css
+.wrapper {
+    max-width: 72rem
+}
+```
+
 ```haskell
 
 -- For normal work requires the OverloadedStrings language extension, and
 -- the BlockArguments extension may be used to make the code prettier.
-
--- To create the CSS rule there are three main methods, `rule`, infix `?`, or
--- nothing if the type is specified (top-level declaration is enough):
->>> rule ".wrapper" (maxWidth "72rem")
->>> ".wrapper" ? (maxWidth "72rem")
->>> ".wrapper" (maxWidth "72rem") :: Css ()
-.wrapper {
-    max-width: 72rem;
-}
 
 -- This Css monad has the Semigroup and Monoid instances, so the elements
 -- can be juxtaposed via semigroup's append:
