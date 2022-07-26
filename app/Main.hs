@@ -5,7 +5,7 @@ Copyright   : (c) Alexey Seledkov, 2022
 License     : GPL-3
 Maintainer  : qyutou@gmail.com
 Stability   : experimental
-Portability : POSIX
+Portability : portable
 -}
 
 {-# LANGUAGE BlockArguments    #-}
