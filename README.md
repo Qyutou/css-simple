@@ -16,7 +16,7 @@ without any function using the OverloadedStrings if the type is specified.
 
 ```css
 .wrapper {
-    max-width: 72rem
+  max-width: 72rem
 }
 ```
 
@@ -28,10 +28,10 @@ juxtaposed via semigroups's append:
 
 ```css
 body {
-    background: #000000
+  background: #000000
 }
 .wrapper {
-    max-width: 72rem
+  max-width: 72rem
 }
 ```
 
@@ -43,9 +43,9 @@ queries:
 
 ```css
 @media only screen and (min-width: 48rem) {
-    .wrapper {
-        max-width: 72rem
-    }
+  .wrapper {
+    max-width: 72rem
+  }
 }
 ```
 
@@ -115,11 +115,11 @@ Pretty (default) configuration:
 
 ```css
 body {
-    background: #000000
+  background: #000000
 }
 .wrapper {
-    width: 90vw;
-    max-width: 72rem
+  width: 90vw;
+  max-width: 72rem
 }
 ```
 
