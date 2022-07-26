@@ -80,3 +80,24 @@ sampleStyle = do
         maxWidth   "72rem"
 
 ```
+
+Rendering configuration define how the CSS Document shall be rendered. It must
+be the Config data type. Currently there are two configurations:
+- `pretty` - Pretty, human-readable configuration, used everywhere by default,
+  yet works slightly slower than the `compact`
+- `compact` - As compact rendering as possible, render as a one-line with the
+  least possible amount of the spacing
+
+The rendering of the CSS documents can be done with the functions:
+- `renderCss` - Used to render the Css as a Data.Text with default rendering
+  configuration
+- `renderCssWith` - Used to render the Css as a Data.Text with certain
+  rendering configuration
+- `putCss` - Used to render the CSS as a Data.Text and print it to stdout with
+  default rendering configuration
+- `putCssWith` Used to render the CSS as a Data.Text with certain rendering
+  configuration and print it to the stdout
+- `renderCssToFile` - Used to render the Css as a Data.Text and save it to
+  FilePath with default rendering configuration
+- `renderCssToFileWith` - Used to render the Css as a Data.Text and save it to
+  FilePath with certain rendering configuration
