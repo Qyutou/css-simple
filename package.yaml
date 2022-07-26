@@ -1,7 +1,7 @@
 name:                css-simple
 version:             0.1.0.0
 github:              "Qyutou/css-simple"
-license:             BSD3
+license:             GPL-3.0
 author:              "Alexey Seledkov"
 maintainer:          "qyutou@gmail.com"
 copyright:           "2022 Alexey Seledkov"
