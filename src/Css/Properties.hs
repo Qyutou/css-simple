@@ -1,5 +1,5 @@
 {-|
-Module      : Css ().Properties
+Module      : Css.Properties
 Description : Module which contain (almost) all CSS3 properties
 Copyright   : (c) Alexey Seledkov, 2022
 License     : GPL-3
